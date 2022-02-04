@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
-export function getPortfolios() {
+function getPortfolios(onSnapshot) {
     const db = firebase.firestore();
     const portfolios = [];
+    var user = firebase.auth().currentUser;
 
     db.collection("portfolios").onSnapshot((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -11,13 +12,23 @@ export function getPortfolios() {
                             + ", Assets: " + doc.data().assets
                             + ", Allocations: " + doc.data().allocations);
         });
+        onSnapshot(portfolios);
     });
 
     return portfolios;
 }
 
-export class PortfolioView extends React.Component {
-    render() {
-        return <p> {getPortfolios()}</p>
-    }
+const PortfolioView = () => {
+    const [portfolios, setPortfolios] = useState([]);
+    useEffect(() => {
+        getPortfolios(setPortfolios);
+    }, []);
+    
+    return(
+        <p>{portfolios.map((ele) => 
+            <li>{ele}</li>
+        )}</p>
+    )
 }
+
+export default PortfolioView;
