@@ -1,14 +1,14 @@
 import { useState } from "react";
 import ReactDOM from 'react-dom';
 
-const Contribute = () => {
+const Remove = () => {
   return (
     <div style={{
       paddingLeft: "20px"
     }}>
-      <h1>Contribute</h1>
+      <h1>Remove Portfolio</h1>
     </div>
   )
 }
 
-export default Contribute;
+export default Remove;

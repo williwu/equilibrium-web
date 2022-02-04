@@ -30,6 +30,7 @@ const Setup = () => {
             paddingLeft: '20px',
             paddingRight: '20px'
         }}>
+            <h1>Setup Portfolio</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
                     <Form.Label>Portfolio Name</Form.Label>

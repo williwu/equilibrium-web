@@ -5,7 +5,7 @@ import './index.css';
 import Layout from './pages/Layout';
 import Portfolio from './pages/Portfolio';
 import Setup from './pages/Setup';
-import Contribute from './pages/Contribute';
+import Remove from './pages/Remove';
 import NoPage from './pages/NoPage'
 // Initialize Cloud Firestore through Firebase
 import firebase from "firebase";
@@ -34,7 +34,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Portfolio />} />
           <Route path="setup" element={<Setup />} />
-          <Route path="contribute" element={<Contribute />} />
+          <Route path="remove" element={<Remove />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

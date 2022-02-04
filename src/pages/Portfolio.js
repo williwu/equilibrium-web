@@ -6,7 +6,7 @@ const Portfolio = () => {
     <div style={{
       paddingLeft: "20px"
     }}>
-      <h1>My Portfolio</h1>
+      <h1>My Portfolios</h1>
       <PortfolioView/>
     </div>
   )

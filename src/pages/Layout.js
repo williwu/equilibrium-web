@@ -10,7 +10,7 @@ const Layout = () => {
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Portfolio</Nav.Link>
                         <Nav.Link href="/setup">Setup</Nav.Link>
-                        <Nav.Link href="/contribute">Contribute</Nav.Link>
+                        <Nav.Link href="/remove">Remove</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
